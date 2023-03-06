@@ -42,7 +42,7 @@ class Parcels{
 		
 		var_dump($stmt);
         exit();
-		$stmt->bind_param("sssssss", $this->parcelname, $this->sendername, $this->receivername, $this->address, $this->trackingcode, $this->shippingdate, $this->receiverdate);
+		$stmt->bind_param("ssssiss", $this->parcelname, $this->sendername, $this->receivername, $this->address, $this->trackingcode, $this->shippingdate, $this->receiverdate);
 		
 		if($stmt->execute()){
 			return true;
@@ -77,13 +77,11 @@ class Parcels{
 	
 	function delete(){
 		
-		$stmt = $this->conn->prepare("
-			DELETE FROM ".$this->parcelTable." 
-			WHERE trackingcode = ?");
+		$stmt = $this->conn->prepare("DELETE FROM ".$this->parcelTable." WHERE id = ?");
 			
-		$this->trackingcode = htmlspecialchars(strip_tags($this->trackingcode));
+		$this->id = $this->id;
 	 
-		$stmt->bind_param("i", $this->trackingcode);
+		$stmt->bind_param("i", $this->id);
 	 
 		if($stmt->execute()){
 			return true;

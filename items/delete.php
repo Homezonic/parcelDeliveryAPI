@@ -15,8 +15,8 @@ $parcels = new Parcels($db);
  
 $data = json_decode(file_get_contents("php://input"));
 
-if(!empty($data->trackingcode)) {
-	$parcels->trackingcode = $data->trackingcode;
+if(!empty($data->id)) {
+	$parcels->id = $data->id;
 	if($parcels->delete()){    
 		http_response_code(200); 
 		echo json_encode(array("message" => "Item was deleted."));
