@@ -7,8 +7,6 @@ Use case: Add Parcel, Read one Parcel, Read all Parcel , Update Parcel and Delet
 
 Example of a user type: Recipient
 
-
 Example of an Entity: Parcel
-
 
 Example of a use case: Create a Parcel delivery. The use case should be in form of an endpoint making a particular action.
