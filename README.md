@@ -5,8 +5,10 @@ Parcel Delivery API
 
 Use case: Add Parcel, Read one Parcel, Read all Parcel , Update Parcel and Delete Parcel
 
-Example of a user type: Recipient
+Example of a user type: Recipient / Sender
 
 Example of an Entity: Parcel
 
-Example of a use case: Create a Parcel delivery. The use case should be in form of an endpoint making a particular action.
+Example of a use case: Create a Parcel delivery.
+
+Can be tested with Postman.
